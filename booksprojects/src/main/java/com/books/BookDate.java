@@ -229,21 +229,7 @@ public class BookDate {
 					"----------------------------------------------------------------------------------------------------");
 
 		}
-
-		/**
-		 * 
-		 * 
-		 * Devuelva los libros que contengan la cadena de caracteres en el nombre, en el
-		 * resumen y en la biografia del autor del libro. En caso de encontrar más de un
-		 * libro en la lista devolver aquel más recientemente publicado. Además se
-		 * deberá devolver el libro con un campo date adicional que contenga el
-		 * timestamp con el siguiente formato de fecha: mm-dd-yyyy.
-		 * 
-		 * Por último, la lista deberá quedar ordenada de la siguiente manera: Primero
-		 * agrupada por fecha de publicación y luego ordenada por la biografia de autor
-		 * más corta.
-		 */
-
+		
 		return Optional.empty();
 
 	}

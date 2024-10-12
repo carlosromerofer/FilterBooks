@@ -38,22 +38,6 @@ public class App {
 			}.getType();
 
 			List<BookDate> bookList = gson.fromJson(fileReader, type);
-
-			/*
-			 * for (BookDate book : bookList) { System.out.println("ID: " + book.getId());
-			 * System.out.println("Title: " + book.getTitle());
-			 * System.out.println("Publication Date: " + book.getPublicationTimestamp());
-			 * System.out.println("Pages: " + book.getPages());
-			 * System.out.println("Summary: " + book.getSummary());
-			 * System.out.println("Author Name: " + book.getAuthor().getName());
-			 * System.out.println("Author Surname: " + book.getAuthor().getFirstSurname());
-			 * System.out.println("Author Bio: " + book.getAuthor().getBio());
-			 * System.out.println(
-			 * "-----------------------------------------------------------");
-			 * 
-			 * }
-			 */
-
 			BookDate bd = new BookDate();
 
 			Method method = bd.getClass().getDeclaredMethod("filter", String.class, List.class);
@@ -61,14 +45,13 @@ public class App {
 			method.invoke(bd, new Object[] { menuOptions(), bookList });
 
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
 	}
 
 	public static String menuOptions() {
-		// TODO: mejorar a do-while para volver a mostrar elecciones
+		// TODO: mejorar a do-while para volver a mostrar elecciones y pasar comentarios a inglés
 		try {
 			System.out.println("Elija la información que desea obtener:");
 			System.out.println("1 - Libros que no tengan fecha de publicación");
